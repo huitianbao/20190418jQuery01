@@ -16,6 +16,7 @@
 
         <!--引入 JQuery文件-->
         <script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
+        <!--显示与隐藏 -->
         <script>
             $(document).ready(function () {
                 $("#hide").click(function () {
@@ -25,18 +26,58 @@
                 $("#show").click(function () {
                     $("p").show();
                 });
-                
-                $("#hide100").click(function(){
+
+                $("#hide100").click(function () {
                     $("p").hide(1000);
                 });
                 //jQuery toggle()
                 //就是一个按钮解决 显示与隐藏的问题
-                $("#toggle").click(function(){
+                $("#toggle").click(function () {
                     $("p").toggle();
                 });
-                
+
             });
         </script>
+
+        <!-- 淡入淡出-->
+
+        <script>
+
+            $(document).ready(function () {
+                $("#fadein").click(function () {
+                    $("#div1").fadeIn();
+                    $("#div2").fadeIn("slow");
+                    $("#div3").fadeIn(3000);
+                });
+
+                $("#fadeout").click(function () {
+                    $("#div1").fadeOut();
+                    $("#div2").fadeOut("slow");
+                    $("#div3").fadeOut(3000);
+                });
+
+                //jQuery fadeToggle()
+                $("#fadeToggle").click(function () {
+                    $("#div1").fadeToggle();
+                    $("#div2").fadeToggle("slow");
+                    $("#div3").fadeToggle(3000);
+                });
+
+
+                //jQuery fadeTo() 方法
+
+
+                $("#fadeTo").click(function () {
+                    $("#div1").fadeTo("slow", 0.15);
+                    $("#div2").fadeTo("slow", 0.4);
+                    $("#div3").fadeTo("slow", 0.7);
+                });
+
+
+
+            });
+        </script>
+
     </head>
     <body>
         <p>hvNIVAB </p>
@@ -44,6 +85,23 @@
         <input type="button" id="show" value="显示"/>
         <input type="button" id="hide100" value="隐藏100"/>
         <input type="button" id="toggle" value="toggle"/>
+
+
+        <p>演示带有不同参数的 fadeIn() 方法。</p>
+        <button class="fadein" id="fadein">点击这里，使三个矩形淡入</button>
+        <button class="fadeout" id="fadeout">点击这里，使三个矩形淡出</button>
+        <!--jQuery fadeToggle()>--> 
+        <button class="fadeToggle" id="fadeToggle">点击这里，使三个矩形先淡入再淡出</button>
+        <button class="fadeTo" id="fadeTo">点击这 fade to</button>
+
+
+
+        <br><br>
+        <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div>
+        <br>
+        <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div>
+        <br>
+        <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
 
 
     </body>
