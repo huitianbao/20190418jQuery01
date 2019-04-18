@@ -32,6 +32,10 @@
                 $("#btn04").click(function(){
                      $("#img01").after("<b>图片之后</b>");
                 });
+                
+                $("#btn05").click(function(){
+                    $("#div01_p01").empty();
+                });
 
             });
             
@@ -45,10 +49,14 @@
         <button id="btn04">after imgs</button>
            
         <br/>
+        <button id="btn05">删除</button>
         <button id="btn01">追加文本</button>
         <button id="btn02">追加列表项</button>
-
-        <p id="p01">这是第一段</p>
+        <div id="div01_p01">
+            <p id="p01">这是第一段</p>
+        </div>
+        
+        
         <p id="p02">这是第二段</p>
 
         <ol id="ol_1">
