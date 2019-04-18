@@ -94,10 +94,23 @@
         <!--  filp  -->
         <script type="text/javascript">
             $(document).ready(function () {
-                $(".flip").click(function(){
-                    $(".panel").slideDown("slow");
-                });
+                //slideDown()
+//                $(".flip").click(function () {
+//                    $(".panel").slideDown("slow", up);
+//                });
 
+                //slideUp()
+//                function up() {
+//
+//                    $(".flip").click(function () {
+//                        $(".panel").slideUp("slow");
+//                    });
+//                }
+
+//jQuery slideToggle() 方法
+                $(".flip").click(function () {
+                    $(".panel").slideToggle("slow");
+                });
             });
         </script>
 
