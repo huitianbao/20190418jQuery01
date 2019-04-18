@@ -25,6 +25,16 @@
                 $("#show").click(function () {
                     $("p").show();
                 });
+                
+                $("#hide100").click(function(){
+                    $("p").hide(1000);
+                });
+                //jQuery toggle()
+                //就是一个按钮解决 显示与隐藏的问题
+                $("#toggle").click(function(){
+                    $("p").toggle();
+                });
+                
             });
         </script>
     </head>
@@ -32,6 +42,8 @@
         <p>hvNIVAB </p>
         <input type="button" id="hide" value="隐藏"/>
         <input type="button" id="show" value="显示"/>
+        <input type="button" id="hide100" value="隐藏100"/>
+        <input type="button" id="toggle" value="toggle"/>
 
 
     </body>
