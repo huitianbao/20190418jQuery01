@@ -13,7 +13,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-
+        <style type="text/css"> 
+            div.panel,p.flip
+            {
+                margin:0px;
+                padding:5px;
+                text-align:center;
+                background:#e5eecc;
+                border:solid 1px #c3c3c3;
+            }
+            div.panel
+            {
+                height:120px;
+                display:none;
+            }
+        </style>
         <!--引入 JQuery文件-->
         <script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
         <!--显示与隐藏 -->
@@ -66,7 +80,6 @@
 
                 //jQuery fadeTo() 方法
 
-
                 $("#fadeTo").click(function () {
                     $("#div1").fadeTo("slow", 0.15);
                     $("#div2").fadeTo("slow", 0.4);
@@ -78,13 +91,36 @@
             });
         </script>
 
+        <!--  filp  -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".flip").click(function(){
+                    $(".panel").slideDown("slow");
+                });
+
+            });
+        </script>
+
+
+
     </head>
     <body>
+        <div class="panel">
+            <p>W3School - 领先的 Web 技术教程站点</p>
+            <p>在 W3School，你可以找到你所需要的所有网站建设教程。</p>
+        </div>
+
+        <p class="flip">请点击这里</p>
+        <br/>
+
         <p>hvNIVAB </p>
         <input type="button" id="hide" value="隐藏"/>
         <input type="button" id="show" value="显示"/>
         <input type="button" id="hide100" value="隐藏100"/>
         <input type="button" id="toggle" value="toggle"/>
+        <br/>
+
+
 
 
         <p>演示带有不同参数的 fadeIn() 方法。</p>
@@ -102,6 +138,7 @@
         <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div>
         <br>
         <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
 
 
     </body>
